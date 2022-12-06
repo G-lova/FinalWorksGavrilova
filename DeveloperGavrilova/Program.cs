@@ -35,3 +35,10 @@ string[] ReformedStringArray(string[] array)
     return reformedArray;
 }
 
+Console.Write("Введите количество элементов массива: ");
+int m = Convert.ToInt32(Console.ReadLine());
+string[] stringArray = CreateStringArray(m);
+ShowArray(stringArray);
+string[] reformedStringArray = ReformedStringArray(stringArray);
+Console.WriteLine("New array is: ");
+ShowArray(reformedStringArray);
