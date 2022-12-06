@@ -17,3 +17,21 @@ void ShowArray(string[] array)
 
     Console.WriteLine("]");
 }
+
+string[] ReformedStringArray(string[] array)
+{
+    int size = 0;
+    for (int i = 0; i < array.Length; i++)
+        if (array[i].Length <= 3)
+            size++;
+    string[] reformedArray = new string[size];
+    for (int i = 0, j = 0; i < array.Length; i++, j++)
+    {
+        if (array[i].Length <= 3)
+            reformedArray[j] = array[i];
+        else
+            j--;
+    }
+    return reformedArray;
+}
+
